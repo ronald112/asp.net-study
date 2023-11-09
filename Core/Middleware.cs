@@ -2,7 +2,7 @@
 {
     public class Middleware
     {
-        private readonly RequestDelegate next;
+        private readonly RequestDelegate _next;
 
         public Middleware()
         {
@@ -11,7 +11,7 @@
 
         public Middleware(RequestDelegate next)
         {
-            this.next = next;
+            this._next = next;
         }
 
         public async Task Invoke(HttpContext context)
@@ -26,9 +26,9 @@
                 await context.Response.WriteAsync("Class-based Middleware\n");
             }
 
-            if (next != null)
+            if (_next != null)
             {
-                await next.Invoke(context);
+                await _next.Invoke(context);
             }
         }
     }
