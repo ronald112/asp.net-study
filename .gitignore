@@ -1,3 +1,5 @@
 ﻿.vs/Core/DesignTimeBuild
 .vs/Core/FileContentIndex
 .vs/Core/v17
+Core/bin
+Core/obj
