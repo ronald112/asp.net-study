@@ -1,6 +1,12 @@
 using Core;
 
 var builder = WebApplication.CreateBuilder(args); // setting up a basic feature, login, configuuration etc..
+
+builder.Services.Configure<FruitOptions>(options =>
+{
+
+});
+
 var app = builder.Build(); // set up middleware components
 
 //app.Use(async (context, next) =>
