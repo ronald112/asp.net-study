@@ -6,7 +6,7 @@
         public async Task Format(HttpContext httpContext, string text)
         {
             httpContext.Response.ContentType = "text/html";
-            await httpContext.Response.WriteAsync($"Formatted Response {++_responseCouter} \n + <h2>{text}</h2>");
+            await httpContext.Response.WriteAsync($"Formatted Response {++_responseCouter} \n <h2>{text}</h2>");
         }
     }
 }
